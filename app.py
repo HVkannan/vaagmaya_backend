@@ -451,7 +451,7 @@ async def protected_route(current_user: str = Depends(get_current_user)):
     return {"message": f"Hello, {current_user}"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
+    port = int(os.environ.get("PORT", 8000))  # fallback to 8000 if PORT not set
+    uvicorn.run(app, host="0.0.0.0", port=port)
 db.fs.files.find({}, { "filename": 1, "_id": 0 })
 
