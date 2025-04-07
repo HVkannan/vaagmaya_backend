@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+motor
+gtts
+faster-whisper
+twilio
+firebase-admin
+aiortc
+bson
+python-jose
+pymongo
+gridfs
+pytz
