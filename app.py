@@ -64,7 +64,7 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 app = FastAPI()
 
 # Load Whisper Model (Use "cuda" for GPU acceleration, "cpu" for CPU)
-model = WhisperModel("small", device="cuda", compute_type="float16")
+model = WhisperModel("small", device="cpu", compute_type="int8")
 
 # Initialize Firebase (only for Firestore, not Storage)
 cred = credentials.Certificate("C:/HV/Speech_training/Whisper/whisper_api/firebase_credentials.json")
